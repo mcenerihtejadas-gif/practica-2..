@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+         
+     
+  --fondo-oscuro: #090b1a;     
+    --fondo-tarjeta: #1b1938;    
+    --acentos: #aa5cdb;           
+    --texto-blanco: #ffffff;
+    --texto-parrafo: hsla(0, 0%, 100%, 0.75);
+    --texto-etiqueta: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--fondo-oscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    background-color: var(--fondo-tarjeta);
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 1100px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.content-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.title {
+    color: var(--texto-blanco);
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--acentos);
+}
+
+.description {
+    color: var(--texto-parrafo);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.stat-number {
+    display: block;
+    color: var(--texto-blanco);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.stat-label {
+    color: var(--texto-etiqueta);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.image-section {
+    position: relative;
+    background-color: var(--acentos); 
+    line-height: 0;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6; 
+    mix-blend-mode: multiply; 
+}
+
+@media (min-width: 900px) {
+    .card {
+        flex-direction: row; 
+        height: 450px;
+    }
+
+    .content-section {
+        width: 50%;
+        text-align: left;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .image-section {
+        width: 50%;
+    }
+
+    .stats-container {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+}
